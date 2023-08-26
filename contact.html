@@ -2,25 +2,42 @@
 <html>
 
 <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <title>Website Template</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-    <section class="banner">
+        <section class="banner">
         <nav>
-            <a href="index.html">
-                <img src="logo.png">
-            </a>
-            <div class="navbar">
+            <a href="index.html"><img src="logo.png"></a>
+            <div class="navbar" id="navbar">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
     </section>
+
+    <!--JS to toggle menu-->
+    <script>
+
+        var navLinks = document.getElementById("navbar");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-300px"
+        }
+
+    </script>
 
 
     <div class="contact-info">
@@ -28,6 +45,7 @@
         <p>Email: test@gmail.com</p>
         <p>Tel.: (030) 1234 56789</p>
     </div>
+
 </body>
 
 </html>
